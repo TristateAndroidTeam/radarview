@@ -20,12 +20,16 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     ArrayList<ObjectModel> mDataSet = new ArrayList<>();
     private LatLongCs mLatCenter = new LatLongCs(23.0663701, 72.5295074);
-    RadarViewC radarConstraintViewView;
+    RadarViewC mRadarCustom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mRadarCustom=(RadarViewC)findViewById(R.id.mRadarCustom);
+        animateRadar();
+        loadTempData();
+
     }
 
     private void animateRadar() {
@@ -71,9 +75,9 @@ public class MainActivity extends AppCompatActivity {
         mDataSet.add(new ObjectModel(23.069906, 72.515504, 150, t3));
         mDataSet.add(new ObjectModel(23.069608, 72.516477, 150, t4));
         mDataSet.add(new ObjectModel(23.069213, 72.517739, 100, t5));
-        radarConstraintViewView.setupData(250, mDataSet, latLongCs, mCenterView);
+        mRadarCustom.setupData(250, mDataSet, latLongCs, mCenterView);
 
-        radarConstraintViewView.setUpCallBack(new RadarViewC.IRadarCallBack() {
+        mRadarCustom.setUpCallBack(new RadarViewC.IRadarCallBack() {
             @Override
             public void onViewClick(Object objectModel, View view) {
 
