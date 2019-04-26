@@ -80,4 +80,4 @@ mRadarCustom.setUpCallBack(new RadarViewC.IRadarCallBack() {
         });
 
 ```
-![alt text](https://github.com/TristateAndroidTeam/radarview/blob/master/picture/img2.png){:height="700px" width="400px"}
+![alt text](https://github.com/TristateAndroidTeam/radarview/blob/master/picture/img2.png)
